@@ -12,6 +12,7 @@ link(rel="stylesheet", href="css/vendor/bootstrap.css")
           h4 #{p._source.photographerBUN} #{p._source.photoDate}
           p Location: #{p._source.photoLocation}
           b Tags: #{p._source.photoTags}
+          img(src: #{p._source.imageURL}, align:"center")
           script
             addMarker(#{p._source.photoLocation})
       .map-canvas
