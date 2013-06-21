@@ -1,0 +1,1 @@
+define(function(){return function anonymous(locals){var buf=[];with(locals||{})buf.push('<div class="loading loading-bezel animated popin"><center><p>'+jade.escape((jade.interp=message)==null?"":jade.interp)+'</p><img alt="loading..." src="img/loading.png" class="animated spinner"/></center></div>');return buf.join("")}})

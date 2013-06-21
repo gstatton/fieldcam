@@ -1,0 +1,17 @@
+link(rel="stylesheet", href="css/vendor/bootstrap.css")
+
+.row
+  .span12
+    center 
+      span(style="color:#fff") 
+        p: b Searching: #{search}
+      br
+    .row
+      for p in photos
+        .well.span5
+          h4 #{p._source.photographerBUN} #{p._source.photoDate}
+          p Location: #{p._source.photoLocation}
+          b Tags: #{p._source.photoTags}
+          script
+            addMarker(#{p._source.photoLocation})
+      .map-canvas

@@ -1,0 +1,44 @@
+.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container
+      button.btn.btn-navbar(type="button", data-toggle="collapse", data-target=".nav-collapse")
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+      a.brand(href="#") FieldCam
+
+      .nav-collapse.subnav-collapse
+        ul.nav.nav-group
+
+          li#home
+            a(href="#/")
+              i.icon-home
+              |  Home
+
+          li#about
+            a(href="#/about")
+              i.icon-heart
+              |  About
+
+          li.divider-vertical
+
+          form.navbar-search(onsubmit="return lookupuser();")
+            input.search-query(type="text", placeholder="Search", name="q", id="usersearch", value="")
+
+
+
+        ul.nav.pull-right
+          li.dropdown
+            a.dropdown-toggle.avatar-toggle(href="#", data-toggle="dropdown")
+              img.avatar-small(src="http://avatars.io/email/#{emailaddress}", height="24", width="24")
+              | #{name.first} #{name.last} 
+              span.caret
+
+            ul.dropdown-menu
+              li
+                a(tabindex="-1", href="#/settings") Settings
+              li.divider
+              li
+                a(tabindex="-1", href="", onclick="logout()") Logout
+
